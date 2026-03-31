@@ -1,51 +1,52 @@
 import User from "./user";
-import avatar1 from "../assets/avatar1.jpg";
+const images = import.meta.glob("../assets/*.jpg", { eager: true });
+const avatars = Object.values(images);
 function UserList() {
   const users = [
     {
       name: "Trần Đình Khánh",
       dvi: "Phòng Kế toán",
-      avatar: avatar1,
+      avatar: avatars[1].default,
     },
     {
       name: "Trương Gia Huy",
       dvi: "Phòng Nhân sự",
-      avatar: avatar1,
+      avatar: avatars[2].default,
     },
     {
       name: "Phan Thanh Thành",
       dvi: "Phòng IT",
-      avatar: avatar1,
+      avatar: avatars[3].default,
     },
     {
       name: "Phạm Tạ Quốc Thịnh",
       dvi: "Marketing",
-      avatar: avatar1,
+      avatar: avatars[4].default,
     },
     {
       name: "Lưu Thị Ngọc Lành",
       dvi: "Kinh doanh",
-      avatar: avatar1,
+      avatar: avatars[5].default,
     },
     {   
       name: "Nguyễn Thảo Uyên",
       dvi: "Chăm sóc khách hàng",
-      avatar: avatar1,
+      avatar: avatars[6].default,
     },
     {
       name: "Nguyễn Quốc Cường",
       dvi: "Logistics",
-      avatar: avatar1,
+      avatar: avatars[7].default,
     },
     {
       name: "A Ngọc Kiểm",
       dvi: "Hành chính",
-      avatar: avatar1,
+      avatar: avatars[8].default,
     },
     {
       name: "A Tuấn",
       dvi: "Kỹ thuật",
-      avatar: avatar1,
+      avatar: avatars[9].default,
     },
   ];
   return (
