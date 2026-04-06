@@ -1,4 +1,7 @@
 import User from "./user";
+import Clickme from '../components/Clickme'
+{/*import {Appp} from '../components/useEffect';*/}
+import EffectDemo from '../components/useState'
 const images = import.meta.glob("../assets/*.jpg", { eager: true });
 const avatars = Object.values(images);
 function UserList() {
@@ -51,13 +54,17 @@ function UserList() {
   ];
   return (
     <div className="user-list">
-      {users.map((user) => (
+      {users.map((user, id) => (
         <User
+          key={id}
           avatar={user.avatar}
           name={user.name}
           dvi={user.dvi}
         />
       ))}
+      <Clickme/>
+      {/*<Appp/>*/}
+      <EffectDemo/>
     </div>
   );
 }
