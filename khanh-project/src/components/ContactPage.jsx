@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 const tabs = ['posts', 'comments', 'albums', 'photos', 'users', 'todos'];
-export function Content() {
+export function ContactPage() {
   const [title, setTitle] = useState('');
   const [posts, setPosts] = useState([]);
   const [type, setType] = useState('posts'); 
@@ -40,4 +40,4 @@ export function Content() {
     </div>
   );
 }
-export default Content;
+export default ContactPage;

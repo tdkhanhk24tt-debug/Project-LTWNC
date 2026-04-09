@@ -1,14 +1,23 @@
-import UserList from "./components/userList";
-import Content from "./components/posts.jsx";
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './components/Apppp';
+import AboutPage from './components/AboutPage';
+import ContactPage from './components/ContactPage';
+import Layout from './components/layout'
 import "./App.css";
-
 function App() {
   return (
-    <div>
-      <h1>Danh sách người dùng</h1>
-      <UserList />
-      <Content />
-    </div>
+    <BrowserRouter>
+      <Routes>
+          {/* Các Route con sẽ được render bên trong Layout */}
+          <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="contact" element={<ContactPage />} />
+      </Route>
+      </Routes>
+    </BrowserRouter>
+    
   );
 }
 
